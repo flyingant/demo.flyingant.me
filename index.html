@@ -5,125 +5,80 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <style>
-        @font-face {
-            font-family: Gotham-Medium;
-            src: url('fonts/gotham-medium.ttf') ;
-        }
-
-        body {
-            font-family: Gotham-Medium;
-            background: url('images/bg.png') repeat;
-        }
-
-        .frame {
-            position: relative;
-            z-index:100;
-            width: 320px;
-            height: 462px;
-            margin: 30px auto;
-            padding-top:10px;
-            background-color: white;
-            box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
-        }
-
-        .frame .photo{
-            display: block;
-            width: 300px;
-            height: 332px;
-            margin: 0 auto;
-        }
-
-        .frame .tagline{
-            display:block;
-            margin: 30px auto;    
-        }
-        .text{
-            text-align: center;
-            font-size: 13px;
-            line-height: 20px;
-            color: white;
-        }
-        .logo {
-            position:fixed;
-            z-index:90;
-            bottom:18px;
-            right:18px;
-            width:30px;
-            height:32px;
-            background:url('images/logo.png') no-repeat; 
-        }
-    </style>
 </head>
 <body>
-<div class="frame">
-    <img class="photo" src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e06ecfcd-18af-46d9-b71f-6c6dcf2ad01f/IMG_4097.JPG"/>
-    <img class="tagline" src='images/word.png'/>
-</div> 
-<div class="logo"></div>
-<p class="text">
-  WE HAVE GIFT FOR
-  <br/> 
-  THE FIRST 1000 VISITORS
-</p>
-<script>
-    sdkconfig = {
-            openid: "opkpPxFztY2wEuOLqvCrNn0sSnhY", // 必传，用户在微信端的唯一标识
-            campaigncode: "etam_digittable", // 必传,活动前需向Arvato申领
-            pagename: "TestPage", // 必传，页面标题
-            token: "d0f6960018b7423ffdf9", // 必传，加密参数,加密方式见接口文档
-            timestamp: "1491816043", // 必传，当前时间戳
-            share: { //非必传
-                /* 默认 */
-                default: {
-                    title: "快乐大本营",
-                    desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。节目开始采用全民娱乐的类型，经常邀请一些有特殊才能的人物，一些可爱的孩子来表演，后有转为选秀节目，来选举其主持人；现在多以嘉宾访谈游戏型的综艺节目，经常邀请一些中国大陆、香港、台湾的知名艺人来访谈，游戏等。是湖南卫视的品牌节目之一。",
-                    link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
-                    imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
-                },
-                /* 分享至朋友圈 */
-                timeline: {
-                    title: "快乐大本营-朋友圈",
-                    link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
-                    imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
-                },
-                /* 分享给朋友 */
-                appmessage: {
-                    title: "快乐大本营-朋友",
-                    desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。",
-                    link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
-                    imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
-                },
-                /* 分享至QQ */
-                qq: {
-                    title: "快乐大本营-QQ",
-                    desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。",
-                    link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
-                    imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
-                },
-                /* 分享至微博 */
-                weibo: {
-                    title: "快乐大本营-微博",
-                    desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。",
-                    link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
-                    imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
-                },
-                /* 分享至QQ空间 */
-                qzone: {
-                    title: "快乐大本营-QQ空间",
-                    desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。",
-                    link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
-                    imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
-                }
+    <h1>index</h1>
+ <script>
+        sdkconfig = {
+                openid: "opkpPxLdRpMKcY84hU4tEbiyaJ34", // 必传，用户在微信端的唯一标识
+                campaigncode: "10010", // 必传,活动前需向Arvato申领
+                pagename: "TestPage", // 必传，页面标题
+                token: "token", // 必传，加密参数,加密方式见接口文档
+                timestamp: "timestamp", // 必传，当前时间戳
+                share: { //非必传
+                    /* 默认 */
+                    default: {
+                        title: "快乐大本营",
+                        desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。节目开始采用全民娱乐的类型，经常邀请一些有特殊才能的人物，一些可爱的孩子来表演，后有转为选秀节目，来选举其主持人；现在多以嘉宾访谈游戏型的综艺节目，经常邀请一些中国大陆、香港、台湾的知名艺人来访谈，游戏等。是湖南卫视的品牌节目之一。",
+                        link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
+                        imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
+                    },
+                    /* 分享至朋友圈 */
+                    timeline: {
+                        title: "快乐大本营-朋友圈",
+                        link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
+                        imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
+                    },
+                    /* 分享给朋友 */
+                    appmessage: {
+                        title: "快乐大本营-朋友",
+                        desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。",
+                        link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
+                        imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
+                    },
+                    /* 分享至QQ */
+                    qq: {
+                        title: "快乐大本营-QQ",
+                        desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。",
+                        link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
+                        imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
+                    },
+                    /* 分享至微博 */
+                    weibo: {
+                        title: "快乐大本营-微博",
+                        desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。",
+                        link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
+                        imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
+                    },
+                    /* 分享至QQ空间 */
+                    qzone: {
+                        title: "快乐大本营-QQ空间",
+                        desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。",
+                        link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
+                        imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
+                    }
 
+                }
             }
+            //$_CampaignLog({});
+            //$_CampaignLogRes
+        $_CallBack = function(key, val) {
+            console.log("key:" + key + " , 结果:" + val);
+            $.ajax({
+                    url: 'https://rms-staging-etam.wiredcraft.net/api/customers/share?openId='+'opkpPxFztY2wEuOLqvCrNn0sSnhY'+'&actionType='+'photoSharing',
+                    headers: {
+                        'Accept':'application/etm.api+json',
+                        'Content-Type':'application/etm.api+json'
+                    },
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(response){
+                        console.log('Response EN: ' + response.data.EN);
+                        console.log('Response CN: ' + response.data.CN);
+                    }
+            });
         }
-        //$_CampaignLog({});
-        //$_CampaignLogRes
-    $_CallBack = function(key, val) {
-        alert("key:" + key + " , 结果:" + val);
-    }
-</script>
-<script src="http://api.etamtest.iego.cn/js/sdk_v0.9.6.js"></script>
+    </script>
+    <script src="http://wxapi.etam.com.cn:8080/js/sdk_v0.9.6.js"></script>
 </body>
 </html>
