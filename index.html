@@ -5,81 +5,84 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap; 
+            padding: 0;
+        }
+        video {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>index</h1>
- <script>
-        sdkconfig = {
-                isdebug: true,
-                openid: "opkpPxLdRpMKcY84hU4tEbiyaJ34", // 必传，用户在微信端的唯一标识
-                campaigncode: "10010", // 必传,活动前需向Arvato申领
-                pagename: "TestPage", // 必传，页面标题
-                token: "token", // 必传，加密参数,加密方式见接口文档
-                timestamp: "timestamp", // 必传，当前时间戳
-                share: { //非必传
-                    /* 默认 */
-                    default: {
-                        title: "快乐大本营",
-                        desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。节目开始采用全民娱乐的类型，经常邀请一些有特殊才能的人物，一些可爱的孩子来表演，后有转为选秀节目，来选举其主持人；现在多以嘉宾访谈游戏型的综艺节目，经常邀请一些中国大陆、香港、台湾的知名艺人来访谈，游戏等。是湖南卫视的品牌节目之一。",
-                        link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
-                        imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
-                    },
-                    /* 分享至朋友圈 */
-                    timeline: {
-                        title: "快乐大本营-朋友圈",
-                        link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
-                        imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
-                    },
-                    /* 分享给朋友 */
-                    appmessage: {
-                        title: "快乐大本营-朋友",
-                        desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。",
-                        link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
-                        imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
-                    },
-                    /* 分享至QQ */
-                    qq: {
-                        title: "快乐大本营-QQ",
-                        desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。",
-                        link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
-                        imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
-                    },
-                    /* 分享至微博 */
-                    weibo: {
-                        title: "快乐大本营-微博",
-                        desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。",
-                        link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
-                        imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
-                    },
-                    /* 分享至QQ空间 */
-                    qzone: {
-                        title: "快乐大本营-QQ空间",
-                        desc: "《快乐大本营》是湖南电视台于1997年7月11日开办的一档综艺性娱乐节目，是湖南卫视上星以来一直保持的品牌节目之一。",
-                        link: "http://www.360kan.com/va/ZsEob6Jv7JQ3Dz.html",
-                        imgUrl: "http://p5.qhimg.com/t017dbded61ea763e99.jpg"
-                    }
-
-                }
-            }
-            //$_CampaignLog({});
-            //$_CampaignLogRes
-        $_CallBack = function(key, val) {
-            console.log("key:" + key + " , 结果:" + val);
-            $.ajax({
-                    url: 'https://rms-staging-etam.wiredcraft.net/api/customers/share?openId='+'opkpPxFztY2wEuOLqvCrNn0sSnhY'+'&actionType='+'photoSharing',
-                    headers: {
-                        'Accept':'application/etm.api+json',
-                        'Content-Type':'application/etm.api+json'
-                    },
-                    method: 'GET',
-                    dataType: 'json',
-                    success: function(response){
-                        console.log('Response EN: ' + response.data.EN);
-                        console.log('Response CN: ' + response.data.CN);
-                    }
-            });
-        }
-    </script>
-    <script src="http://wxapi-stg.etam.com.cn:8080/js/sdk_v0.9.6.js"></script>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140" autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="256" height="140"  autoplay loop>
+  <source src="http://flyingant.oss-cn-hangzhou.aliyuncs.com/e2f986c5-913c-4b20-95e1-12cf3e0e6e74/SampleVideo_1280x720_20mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 </body>
 </html>
