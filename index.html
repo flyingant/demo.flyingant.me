@@ -1,22 +1,27 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <style>
-        body {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            flex-wrap: wrap; 
-            padding: 0;
-        }
-    </style>
+  <meta charset="utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <title>Dior Memberships APP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  
 </head>
 <body>
-    <h1>just a demo</h1>
+<div id="main"></div>
+
+<script type="text/javascript" src="./commons.js"></script>
+
+<script type="text/javascript" src="./app.bundle.js"></script>
+
+<script type="text/javascript">
+  function isIE () {
+    var myNav = navigator.userAgent.toLowerCase();
+    return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+  }
+  if (isIE () && isIE () < 9) {
+    alert("您的浏览器版本过低 为了更好的体验,请升级您的浏览器! （The current version of your browser is not up to date. Please update your browser or switch browsers to continue.）");
+  }
+</script>
 </body>
 </html>
