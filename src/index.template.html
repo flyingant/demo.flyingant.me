@@ -1,11 +1,22 @@
-<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= htmlWebpackPlugin.options.title %></title>
+  <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=EYABZ-LSEEP-SYNDN-VNZ7T-3YXGH-L5FHK"></script>
 </head>
 <body>
-  
+  <script>
+    function init() {
+        citylocation = new qq.maps.CityService({
+            complete : function(results){
+                console.log('所在位置: ' + JSON.stringify(results.detail));
+            }
+        });
+        var latLng = new qq.maps.LatLng('39.89477', '116.35432');
+        citylocation.searchCityByLatLng(latLng);
+    }
+    init()
+</script>
 </body>
 </html>
