@@ -3,28 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wechat SDK Debugger Tool</title>
-  <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Alipay Browser Testing</title>
   </head>
   <body>
-  <script>
-    wx.config({
-      debug: true, // turn on debug mode, call all return value of api, which will be in alert in client's end. To view the incoming parameters, this cane be opened on a pc, the parameter information will be displayed through a log, only to be printed on a pc.
-      appId: 'wx186c10fc6a4ff63c', // Required, the only identification of Official account.
-      timestamp: '1529633444', // Required, generate a signed timestamp
-      nonceStr: 'flyingant', // Required, generate a signed nonceStr
-      signature: 'ba7d8e5934ce77af7532db9639f5d9889fba495d',// Required, signature. See Appendix 1
-      jsApiList: [] // Required, required JA interface list, all JS interface list, see Appendix 2
-    });
-    wx.ready(function(res){
-      console.log('Response:', res);
-      // config information validation will execute by the ready method, all interface call must be done after config interface get the result. Config is an asynchronous operation of client's side. If call relevant interface is required when loading a page, the relevant interface must be called on the ready function to ensure correct execution. For those interface call when triggered by users, it can be called directly, not required to be in the ready function.
-    });
-    wx.error(function(res){
-      alert('Something is wrong');
-      // config information failure will execute error function, such as expired signature to cause verification failure, the error message can be viewed via debug mode in config, also be viewed via returned res parameter. SPA can renew signature here.
-    });
-  </script>
-</body>
+    <a target='_blank' class='link' id="app-store-tencent" href='http://android.myapp.com/myapp/detail.htm?apkName=com.starbucks.cn'>应用宝</a>
+  </body>
 </html>
